@@ -3,7 +3,7 @@ const addElement = document.querySelector('.js-addbtn');
 const containerElement = document.querySelector('.container');
 const dateInputElement = document.querySelector('.js-todo-date');
 
-let tasks = JSON.parse(localStorage.getItem('tasks'));
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 function setTodayDate() {
     const today = new Date().toISOString().split('T')[0];
@@ -52,6 +52,6 @@ function keydown(event) {
         addtask();
     }
 }
-randertasks();
+renderTasks();
 
 
