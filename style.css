@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    overflow: auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    transition: top 0.3s;
+}
+
+.todo-input, .todo-date {
+    padding: 10px;
+    border: 2px solid #764ba2;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.addbtn {
+    background: #764ba2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.addbtn:hover {
+    background: #5a3d8e;
+}
+
+.container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    overflow-y: auto;
+    max-height: 70vh;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tasks-list {
+    background: white;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, opacity 0.3s;
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tasks-list span {
+    flex: 1;
+}
+
+.tasks-list span:nth-child(2) {
+    text-align: right;
+    padding-left: 20px;
+    margin-right: 8px;
+}
+
+.tasks-list:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.deletebtn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.deletebtn:hover {
+    background: #cc0000;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-height: 28vh;
+        top: 10px;
+    }
+    
+    .todo-input, .todo-date, .addbtn {
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 20px;
+        width: 90%;
+        max-height: 60vh;    
+    }
+}
